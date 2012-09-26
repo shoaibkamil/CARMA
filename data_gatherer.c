@@ -48,8 +48,11 @@ int guess_num_matrices(int m, int k, int n) {
 		break;
   }
 
-  for (i=0; i<num_matrices; i++)
+  for (i=0; i<num_matrices; i++) {
 	  free(A[i]);
+	  free(B[i]);
+	  free(C[i]);
+  }
 
   return num_matrices;
 
